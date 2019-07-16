@@ -11,7 +11,7 @@ namespace PngParser
         public PngacTLChunk(uint frames, uint loop) : base("acTL", new byte[8])
         {
             Array.Copy(ToBytes(frames), 0, Data, 0, 4);
-            Array.Copy(ToBytes(frames), 0, Data, 4, 4);
+            Array.Copy(ToBytes(loop), 0, Data, 4, 4);
         }
     }
 }
